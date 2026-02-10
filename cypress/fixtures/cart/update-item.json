@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "cart": {
+    "items": [
+      {
+        "id": 1,
+        "name": "Tênis Cypress",
+        "price": 199.9,
+        "quantity": 2
+      }
+    ],
+    "total": 399.8
+  }
+}
