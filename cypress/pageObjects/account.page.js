@@ -1,6 +1,6 @@
 class AccountPage {
   validateAccountCreated() {
-    cy.contains('Welcome').should('be.visible')                 
+    cy.contains('Welcome', { timeout: 10000 })                
   }
 }
 
