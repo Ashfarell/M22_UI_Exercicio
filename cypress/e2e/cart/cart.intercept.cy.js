@@ -2,7 +2,7 @@ describe('Carrinho - Intercept API', () => {
 
   beforeEach(() => {
     cy.setCookie('ebacStoreVersion', 'v2')
-    cy.visit('/')
+    cy.visit('about:blank') // evita depender do site externo no CI
   })
 
   it('Deve simular adição de item no carrinho', () => {
@@ -43,7 +43,7 @@ describe('Carrinho - Intercept API', () => {
         items: [
           {
             product: 'Produto Mockado',
-            quantity: 3, // quantidade atualizada
+            quantity: 3,
             price: 99.9
           }
         ]
@@ -70,7 +70,7 @@ describe('Carrinho - Intercept API', () => {
       statusCode: 200,
       body: {
         success: true,
-        items: [] // carrinho vazio
+        items: []
       }
     }).as('removeFromCart')
 
@@ -87,4 +87,5 @@ describe('Carrinho - Intercept API', () => {
       expect(response.body.items).to.have.length(0)
     })
   })
+
 })
