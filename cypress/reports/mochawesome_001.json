@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-10T01:00:06.282Z",
+    "end": "2026-03-10T01:00:22.445Z",
+    "duration": 16163,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f47cbb88-8af4-44a5-acb8-74cbf50f12de",
+      "title": "",
+      "fullFile": "cypress\\e2e\\createAccount.cy.js",
+      "file": "cypress\\e2e\\createAccount.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d0c236bb-36f6-4be8-b226-c437a5dac222",
+          "title": "Criação de Conta - Page Objects",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve criar uma nova conta com sucesso",
+              "fullTitle": "Criação de Conta - Page Objects Deve criar uma nova conta com sucesso",
+              "timedOut": null,
+              "duration": 16076,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const email = _faker.faker.internet.email();\nconst password = _faker.faker.internet.password(10);\n_home.default.visit();\n_home.default.goToRegister();\n_register.default.fillEmail(email);\n_register.default.fillPassword(password);\n_register.default.submit();\n_account.default.validateAccountCreated();",
+              "err": {},
+              "uuid": "87e2e402-8bfd-4697-8562-f0ed9ee5ae57",
+              "parentUUID": "d0c236bb-36f6-4be8-b226-c437a5dac222",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "87e2e402-8bfd-4697-8562-f0ed9ee5ae57"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16076,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
